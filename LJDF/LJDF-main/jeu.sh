@@ -1,7 +1,7 @@
 #!/bin/bash
 
 choix(){
-	cowsay "Bonjour et bienvenu sur Le Jeu De Fou!!!   O M G " | lolcat
+	cowsay "Bonjour et bienvenu sur Le Jeu De Fou!!!   O M G " 
 
 	echo  "|| FAIS TON CHOIX : ||"
 	option=("Nouvelle partie" "Charger" "Quit")
