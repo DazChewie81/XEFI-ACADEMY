@@ -10,7 +10,7 @@ choix(){
 		case $opt in
 			"Nouvelle partie")
 				echo "Creation de la partie"
-				python3 test.py 
+				python3 LJDF.py 
 				break
 				;;
 			"Charger")
