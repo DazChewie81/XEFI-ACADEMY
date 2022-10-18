@@ -28,11 +28,11 @@ testClasse = Classe.Classe(mage)
 orc = Monstre.Monstre("Orc", 15)
 print(orc.nom)
 
-simon = Personnage.Personnage("Pendaroue", 30)
-print(simon.pseudo)
-print(orc.pv)
-simon.attaque(baton, orc)
-print(orc.pv)
+#simon = Personnage.Personnage("Pendaroue", 30)
+#print(simon.pseudo)
+#print(orc.pv)
+#simon.attaque(baton, orc)
+#print(orc.pv)
 
 def __init__(self):
         
