@@ -36,9 +36,9 @@ print(orc.pv)
 
 def __init__(self):
         
-        super().__init__()
-        self.button = ttk.Button(self, text='Nouvelle partie')
-        self.__bind()
+    super().__init__()
+    self.button = ttk.Button(self, text='Nouvelle partie')
+    self.__bind()
     
 def __bind(self):
     self.button.bind("<Button-1>", self.newgame)
