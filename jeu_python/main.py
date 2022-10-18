@@ -41,9 +41,12 @@ def __init__(self):
         self.__bind()
     
 def __bind(self):
-        
-        self.button.bind("<Button-1>", self.valider)
+    self.button.bind("<Button-1>", self.newgame)
     
-    def valider(self, event=None):
-        
+def newgame(self, event=None):
+    simon = Personnage.Personnage("Pendaroue", 30)
+    print(simon.pseudo)
+    print(orc.pv)
+    simon.attaque(baton, orc)
+    print(orc.pv)
         
