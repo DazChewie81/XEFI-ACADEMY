@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 import subprocess
+from ui import Ui
 import Arme
 import Classe
 import Personnage
@@ -8,9 +9,9 @@ import Monstre
 import Guerrier
 import Mage
 import Sauvegarde
-import ui
 
-class Main(): 
+
+class Main(Ui): 
     #def __init__(self):
         
         #super().__init__()
@@ -40,5 +41,5 @@ class Main():
 
 ui=ui()
 ui.mainloop()
-main=start()
+main=main()
 start.mainloop()
