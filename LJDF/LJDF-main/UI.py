@@ -1,11 +1,13 @@
 
 import tkinter as tk
 from tkinter import ttk
-from Jeu import JeuPrincipal 
+from Jeu import *
 
-class FenetrePrincipale(tk.Tk, JeuPrincipal):
+class FenetrePrincipale(tk.Tk):
     def __init__(self):
+        print("coucou3")
         super().__init__()
+        self.jeu = LJDF()
 
         self.style = ttk.Style()
         self.style.configure('lfBlocInfosPersos.TLabelframe')
@@ -17,8 +19,10 @@ class FenetrePrincipale(tk.Tk, JeuPrincipal):
         self.fInformations.pack(fill=tk.X)
         self.fValidation.pack(fill=tk.X)
         self.get_menu_frame()
-
+        self.mainloop()
+        
     def get_menu_frame(self):
+        print("coucou2")
         self.style = ttk.Style()
         self.style.configure('stylelabel', background='yellow')
         self.style.configure('stylebouvelle.TButton', color='lightgreen')
@@ -45,7 +49,7 @@ class FenetrePrincipale(tk.Tk, JeuPrincipal):
         self.bNew.bind("<Button-1>", self.__Lien)
         
     def __Lien(self, event=None):
-        super().jeu()
+        self.jeu.lancement()
         
         
     
@@ -55,5 +59,5 @@ class FenetrePrincipale(tk.Tk, JeuPrincipal):
 
 
 
-app = FenetrePrincipale()
-app.mainloop()
+#app = FenetrePrincipale()
+#app.mainloop()
