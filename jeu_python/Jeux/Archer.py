@@ -1,8 +1,7 @@
-import Arme
-class Mage:
+from Jeux.Arme import Arme
+class Archer:
   def __init__(self, arme):
     self.arme = arme
-    
 #fait perdre des pv à ceQuiPerdDesPv en fonction de ceQuiFaitPerdreDesPv
   def attaque(self, ceQuiFaitPerdreDesPv, ceQuiPerdDesPv):
       self.ceQuiPerdDesPv = ceQuiPerdDesPv
