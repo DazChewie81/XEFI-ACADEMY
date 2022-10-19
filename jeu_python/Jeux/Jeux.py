@@ -10,11 +10,14 @@ class Jeux:
     pass
 
   def newgame(self, event=None):
-    orc = Monstre("Orc", 15 ,3)
+    """orc = Monstre("Orc", 15 ,3)
     baton = Arme("baton phénix", 5)
     mage = Mage(baton)
     simon = Personnage("Pendaroue", 30, mage)
     print(simon.pseudo)
     print(f"Il reste {orc.pv} à l'orc")
     simon.classe.attaque(baton, orc)
-    print(f"Il reste {orc.pv} à l'orc")
+    print(f"Il reste {orc.pv} à l'orc")"""
+    
+    if 
+    
