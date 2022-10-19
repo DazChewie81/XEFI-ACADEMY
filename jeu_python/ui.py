@@ -1,22 +1,17 @@
 import tkinter as tk
 from tkinter import ttk
-import subprocess
-import Arme
-import Classe
-import Personnage
-import Monstre
-import Guerrier
-import Mage
-import Sauvegarde
+from jeux import *
 
 
 class Ui(tk.Tk):
     def __init__(self):
         
         super().__init__()
+        self.jeux=Jeux()
         self.button = ttk.Button(self, text='Nouvelle partie')
         self.button.pack()
         self.__bind()
+        
         
     def __bind(self):
         self.button.bind("<Button-1>", self.newgame)
