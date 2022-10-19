@@ -4,6 +4,7 @@ class Sauvegarde:
     self.nom = nom
         
   def save(self):
-    fichier = open("saves/save.txt", "a")
+    fichier = open("/home/simon/Documents/XEFI-ACADEMY/jeu_python/saves/save.txt", "a")
     fichier.write("Bonjour tout seul")
     fichier.close()
+    
