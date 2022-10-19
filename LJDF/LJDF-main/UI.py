@@ -21,6 +21,7 @@ class FenetrePrincipale(tk.Tk):
         self.get_menu_frame()
         self.mainloop()
         
+        
     def get_menu_frame(self):
         print("coucou2")
         self.style = ttk.Style()
@@ -31,9 +32,9 @@ class FenetrePrincipale(tk.Tk):
         
         
         self.lMenu = tk.Label(self.fInformations, text='Menu', font=("Helvetica", 16))
-        self.bNew = ttk.Button(self.fValidation, text='Nouvelle partie', style = 'stylelabel.TButton')
-        self.bCharger = ttk.Button(self.fValidation, text='Charger une partie', style = 'stylecharger.TButton')
-        self.bQuitter = ttk.Button(self.fValidation, text='Quitter', command = self.quit, style = 'stylequitter.TButton')
+        self.bNew = ttk.Button(self.fValidation, text='Nouvelle partie', command = self.destroy, style = 'stylelabel.TButton')
+        self.bCharger = ttk.Button(self.fValidation, text='Charger une partie', command = self.destroy, style = 'stylecharger.TButton')
+        self.bQuitter = ttk.Button(self.fValidation, text='Quitter', command = self.destroy, style = 'stylequitter.TButton')
 
         self.__place()
         self.__bind()
@@ -45,11 +46,32 @@ class FenetrePrincipale(tk.Tk):
         self.bCharger.pack()
         self.bQuitter.pack()
         
+    def new_window(self):
+        
+        self.lPerso = tk.Label(self.fInformations, text='Personnage', font=("Helvetica", 16))
+        self.bPerso = ttk.Entry(self.fValidation)
+        self.bValider = ttk.Button(self.fValidation, text='Valider', style = 'stylecharger.TButton')
+        
+        self.place2()
+        self.mainloop()
+        
+    def __place2(self):
+        self.lPerso.pack()
+        self.bPerso.pack()
+        self.bValider.pack()
+
+        
     def __bind(self):
         self.bNew.bind("<Button-1>", self.__Lien)
         
+        
     def __Lien(self, event=None):
+        self.destroy()
         self.jeu.lancement()
+        self.create()
+        
+        
+        
         
         
     
