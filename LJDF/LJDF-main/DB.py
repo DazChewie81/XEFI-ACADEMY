@@ -6,8 +6,9 @@ class Bdd:
 
     def __init__(self):
         
-        nom = 'eihfuhu'
-        mail = 'dpokcvdhi@gmail.com'
+        nom = 'iop'
+        mail = 'iop@gmail.com'
+        ide= 0
         
         self.conn = sqlite3.connect('bddjeu.db')
 
@@ -23,7 +24,7 @@ class Bdd:
             
         #envoye
         self.newPlayer(nom, mail)   
-        #self.deletePlayer()
+        self.deletePlayer(ide)
 
         # Fermer la connexion 
         self.conn.close
@@ -53,14 +54,14 @@ class Bdd:
         self.conn.commit()
 
     def creationTable(self):
-        req = "CREATE TABLE jeu(id INTEGER PRIMARY KEY AUTOINCREMENT, nom TEXT, email TEXT)"
+        req = "CREATE TABLE jeu(id INTEGER PRIMARY KEY AUTOINCREMENT, nom VARCHAR(255), email VARCHAR(255))"
         self.cur.execute(req)
         
         
-    #def deletePlayer(self):
-    #    sup = "DELETE FROM jeu WHERE nom = 'eihfuhu'"
-    #    self.cur.execute(sup)
-    #    print('alo')
+    def deletePlayer(self, ide):
+        sup = "DELETE FROM jeu WHERE nom = 'pop'"
+        self.cur.execute(sup)
+        self.conn.commit()
         
         
         
