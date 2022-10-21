@@ -1,22 +1,38 @@
 import nmap
+#pip install python-nmap
+import json
 
+#Scan la range de ports choisie sur l'ip renseignée
 class ScanPort():
+    def __init__(self):
+        self.port = None
+        self.ip = None
+        self.scanner = nmap.PortScanner()
+        
     
-# initialize the port scanner
-nmScan = nmap.PortScanner()
+        self.scanning('127.0.0.1', '1-65000')
+        
+    #récupere l'ip et la range de ports a regarder    
+    def scanning(self,ip, portRange):
+        Ports = None
+        State = None
+        self.scanner.scan(ip, portRange)
+        #recupere l'etat ainsi que le nom de l'hote
+        for host in self.scanner.all_hosts():
+            print('Host : %s (%s)' % (host, self.scanner[host].hostname()))
+            print('State : %s' % self.scanner[host].state())
+            #affiche le protocole utilisé sur les ports ouverts
+            for protocols in self.scanner[host].all_protocols():
+                 print('\n')
+                 print('Protocol : %s' % protocols)
+                 ports = self.scanner[host][protocols].keys()
+                 #affiche les ports ouverts
+                 for port in ports:
+                     #Ports = '%s %s '% (Ports, port)
+                     print ('port : %s\tstate : %s' % (port, self.scanner[host][protocols][port]['state']))
+                     #print (Ports)
 
-# scan localhost for ports in range 21-443
-nmScan.scan('172.16.71.254', '1-1000')
 
-# run a loop to print all the found result about the ports
-for host in nmScan.all_hosts():
-     print('Host : %s (%s)' % (host, nmScan[host].hostname()))
-     print('State : %s' % nmScan[host].state())
-     for proto in nmScan[host].all_protocols():
-         print('----------')
-         print('Protocol : %s' % proto)
- 
-         lport = nmScan[host][proto].keys()
-        # lport.sort()
-         for port in lport:
-             print ('port : %s\tstate : %s' % (port, nmScan[host][proto][port]['state']))
+                 
+app = ScanPort
+app()
