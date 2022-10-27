@@ -10,7 +10,7 @@ class ScanPort():
         self.scanner = nmap.PortScanner()
         
     
-        self.scanning('127.0.0.1', '1-65000')
+        self.scanning('127.0.0.1', '1-670')
         
     #récupere l'ip et la range de ports a regarder    
     def scanning(self,ip, portRange):
