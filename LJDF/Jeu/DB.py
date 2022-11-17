@@ -39,10 +39,6 @@ class Bdd:
 
     def newPlayer(self, nom, dmg, hp, nbm):
         # creation de variable
-        # o = "oj"
-        # p = "pkgmail.com"
-
-        # self.sql_insert = "INSERT INTO jeu (nom, email) VALUES ('" + nom +"', '"+ mail +"')"
 
         self.cur.execute("INSERT INTO jeu (nom, dmg, hp, nbm) VALUES ('" + nom + "', '" + dmg + "', '" + hp +"', '" + nbm + "')")
 
