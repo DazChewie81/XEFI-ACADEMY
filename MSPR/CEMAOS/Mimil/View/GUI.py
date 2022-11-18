@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk, Image
 from View.Header import header
+from View.Dashboard import Dashboard
 
 class FenetrePrincipale(tk.Tk):
 
@@ -38,8 +39,8 @@ class FenetrePrincipale(tk.Tk):
         self.resized_imgValeurs= self.imgValeurs.resize((250,250))
         self.new_imageValeurs= ImageTk.PhotoImage(self.resized_imgValeurs)
 
-        self.Dashboard()
-        self.TestsDebit()
+        Dashboard(self)
+        self.TestsDebit(self)
 
         # Caractéristiques de la fenêtre
     def window(self):
