@@ -1,1 +1,1 @@
-efuhdrhbcdhbvhdv
+print("efuhdrhbcdhbvhdv")
