@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
 
-def header(app, page):
+def header(self, page):
     #self.Lname = f"L + {page}"
-    Fheader = tk.Frame(page, bg=app.page_background)
+    Fheader = tk.Frame(page, bg=self.page_background)
     Fheader.pack(fill ='x')
     
     Fheader.columnconfigure(0, weight=1)

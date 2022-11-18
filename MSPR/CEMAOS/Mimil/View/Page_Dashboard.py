@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk, Image
-from statdebit import StatCo
+from View.Frame_Performances_Co import StatCo
 
 # Elments du Dashboard
 def Dashboard(self):
@@ -29,7 +29,7 @@ def Dashboard(self):
 
     self.fDashCO = tk.Frame(self.FDashboard, bg=self.page_background)
     self.fDashCO.pack(fill ='both')
-    self.StatCo(self.fDashCO, self.page_background, '---', '---', '---')
+    StatCo(self, self.fDashCO, self.page_background, '---', '---', '---')
 
     # Frame des listes équipements
     fDashList = tk.Frame(self.FDashboard, bg = self.page_selectionnee)
