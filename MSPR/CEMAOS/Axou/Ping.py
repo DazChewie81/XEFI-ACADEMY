@@ -5,8 +5,8 @@ class Ping():
         self.ip = "8.8.8.8"
         self.reseau = "172.16.71."
         self.pingstatus = None
-        self.ipDeb = 1
-        self.ipFin = 5
+        self.ipDeb = 0
+        self.ipFin = 1
         
         self.TabOn =[]
         self.TabPing=[]

@@ -1,0 +1,12 @@
+
+
+Mettre une barre pour pouvoir se déplacer lorsque la fenêtre est réduite
+
+
+Remplacer les couleurs pour un vrai dégradé et changer les noms des couleurs
+
+
+Faire la dernière page
+
+
+Réordonner la taille des frames et l'esthétique

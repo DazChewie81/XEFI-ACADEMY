@@ -29,11 +29,11 @@ def Dashboard(self):
 
     self.fDashCO = tk.Frame(self.FDashboard, bg=self.page_background)
     self.fDashCO.pack(fill ='both')
-    StatCo(self, self.fDashCO, self.page_background, '---', '---', '---')
+    self.testdashboard=StatCo(self, self.fDashCO, self.page_background, '---', '---', '---')
 
     # Frame des listes équipements
     fDashList = tk.Frame(self.FDashboard, bg = self.page_selectionnee)
-    fDashList.pack(fill ='both')
+    fDashList.pack(fill ='both', expand='TRUE')
 
     fDashList.columnconfigure(0, weight=1)
     fDashList.columnconfigure(1, weight=1)

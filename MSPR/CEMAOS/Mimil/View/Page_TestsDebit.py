@@ -1,15 +1,37 @@
 import tkinter as tk
 from tkinter import ttk
 from View.Frame_Performances_Co import StatCo
+from time import sleep
+
+#! Juste pour faire des essais
+import random
+l=[]
+for i in range(500):
+    l.append(i)
+#! Juste pour faire des essais
 
 def TestsDebit(self):
     self.FTestDebit = tk.Frame(self.FDebit, bg=self.page_selectionnee)
     self.FTestDebit.pack(fill ='both')
-    StatCo(self, self.FTestDebit, self.page_selectionnee, '---', '---', '---')
+    self.testsdebit=StatCo(self, self.FTestDebit, self.page_selectionnee, '---', '---', '---')
 
     # Bouton qui lance le test de débit
-    self.BTest = ttk.Button(self.FDebit, text="Lancer le test", command=FctTestCO)
+    self.BTest = ttk.Button(self.FDebit, text="Lancer le test", command=lambda:{FctTestCO(self)})
     self.BTest.pack(anchor=tk.W, padx=[15,15], pady=[15,15])
 
 def FctTestCO(self):
-    StatCo(self, self.FTestDebit, self.page_selectionnee, '1000', '250', '30')
+    print("CA COMENCE")
+    self.BTest.configure(state=tk.DISABLED)
+    for j in range(10):
+        DL=random.choice(l)
+        UL=random.choice(l)
+        Pi=random.choice(l)
+        self.testsdebit.ValeursDl.configure(text=DL)
+        self.testsdebit.ValeursUl.configure(text=UL)
+        self.testsdebit.ValeursPing.configure(text=Pi)
+        print(self.testsdebit.ValeursPing.cget("text"))
+        sleep(1)
+        self.update()
+    self.BTest.configure(state=tk.NORMAL)
+        
+
