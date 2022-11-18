@@ -1,6 +1,7 @@
 import nmap
 #pip install python-nmap
 import json
+import os
 
 #Scan la range de ports choisie sur l'ip renseignée
 class ScanPort():
@@ -10,7 +11,7 @@ class ScanPort():
         self.scanner = nmap.PortScanner()
         
     
-        self.scanning('127.0.0.1', '1-670')
+        self.scanning('172.16.71.1', '44880-44890')
         
     #récupere l'ip et la range de ports a regarder    
     def scanning(self,ip, portRange):
@@ -23,16 +24,13 @@ class ScanPort():
             print('State : %s' % self.scanner[host].state())
             #affiche le protocole utilisé sur les ports ouverts
             for protocols in self.scanner[host].all_protocols():
-                 print('\n')
-                 print('Protocol : %s' % protocols)
-                 ports = self.scanner[host][protocols].keys()
-                 #affiche les ports ouverts
-                 for port in ports:
-                     #Ports = '%s %s '% (Ports, port)
-                     print ('port : %s\tstate : %s' % (port, self.scanner[host][protocols][port]['state']))
-                     #print (Ports)
-
-
-                 
+                print('\n')
+                print('Protocol : %s' % protocols)
+                ports = self.scanner[host][protocols].keys()
+                #affiche les ports ouverts
+                for port in ports:
+                    Ports = '%s %s '% (Ports, port)
+                    print ('port : %s\tstate : %s' % (port, self.scanner[host][protocols][port]['state']))
+                    
 app = ScanPort
 app()
