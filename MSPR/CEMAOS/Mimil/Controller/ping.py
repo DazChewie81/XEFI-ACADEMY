@@ -21,4 +21,4 @@ def get_ping_latency(host):
 
 
 latency = get_ping_latency('google.com')
-print(latency, " ms")
+
