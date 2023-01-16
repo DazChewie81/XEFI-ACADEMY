@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from Controller.InfoBox import *
 
 def header(self, page):
     #self.Lname = f"L + {page}"
@@ -9,9 +10,9 @@ def header(self, page):
     Fheader.columnconfigure(0, weight=1)
     Fheader.columnconfigure(1, weight=1)
     
-    Lname = ttk.Label(Fheader, text='Nom de la SemaBox')
+    Lname = ttk.Label(Fheader, text=hostname)
     
-    Lip = ttk.Label(Fheader, text='Adresse IP')
+    Lip = ttk.Label(Fheader, text=ip_address)
 
 
     Lname.grid(column=0, row=0, sticky=tk.W)
