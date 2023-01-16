@@ -13,7 +13,7 @@ class StatCo:
         frame.columnconfigure(1, weight=1)
         frame.columnconfigure(2, weight=1)
         
-        self.LMesure = ttk.Label(frame, text='Dernière mesure du débit il y a X minutes', background = couleurbg)
+        self.LMesure = ttk.Label(frame, text='Performances connexion internet', background = couleurbg)
         self.LMesure.grid(column=0, row=0, sticky=tk.W, columnspan = 2)
         
         self.LDownload = ttk.Label(frame, text='Download', background=couleurbg, font=('Source Sans Pro Black', '22', 'bold'))

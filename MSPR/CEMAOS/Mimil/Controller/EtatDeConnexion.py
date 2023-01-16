@@ -24,17 +24,19 @@ def is_connected():
         for addr in addrs:
             if addr.family == psutil.AF_LINK:
                 if "wifi" in interface.lower():
-                    print("Connecté en wifi")
+                    return "Wifi"
+                    
                 elif "eth" in interface.lower():
-                    print("Connecté en ethernet")
+                    return "Ethernet"
                 else:
                     if interface != 'lo':
-                        print(f"Connecté en {interface}")
+                        return f"Interface {interface}"
+                        
 
-is_connected()
+
 
 # Récupère l'ip publique
-def get_public_ip():
+def IpPublique():
     try:
         response = requests.get("https://httpbin.org/ip")
         if response.status_code == 200:
@@ -44,7 +46,6 @@ def get_public_ip():
         pass
     return "Impossible de récupérer l'adresse IP publique"
 
-print(get_public_ip())
 
 
 #! A vérifier

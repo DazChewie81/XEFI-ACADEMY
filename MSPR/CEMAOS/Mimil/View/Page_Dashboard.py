@@ -3,10 +3,14 @@ from tkinter import ttk
 from PIL import ImageTk, Image
 from View.Frame_Performances_Co import StatCo
 from Controller.EtatDeConnexion import *
+from Controller.ping import get_ping_latency
+from Controller.TestCo import FctTestCODashboard
 
 # Elments du Dashboard
 def Dashboard(self):
     connexion()
+
+
     #self.FDashboard
     # Frame de l'état de la connexion
     fDashco = tk.Frame(self.FDashboard, bg=self.page_selectionnee)
@@ -24,7 +28,7 @@ def Dashboard(self):
     LImageCO.grid(column=0, row=1, sticky=tk.W)
     
     #Connecté -> WI-FI / Ethernet / Ip publique /  Nom domaine'
-    EtatCo=str(co+ " -> " )
+    EtatCo=str(co+ " -> " +is_connected()+" / Ip publique: "+IpPublique())
     LConnexion = ttk.Label(fDashco, text=EtatCo, background = self.page_selectionnee )
     LConnexion.grid(column=1, row=1, sticky=tk.W)
 
@@ -33,6 +37,7 @@ def Dashboard(self):
     self.fDashCO = tk.Frame(self.FDashboard, bg=self.page_background)
     self.fDashCO.pack(fill ='both')
     self.testdashboard=StatCo(self, self.fDashCO, self.page_background, '---', '---', '---')
+    FctTestCODashboard(self)
 
     # Frame des listes équipements
     fDashList = tk.Frame(self.FDashboard, bg = self.page_selectionnee)
