@@ -2,9 +2,11 @@ import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk, Image
 from View.Frame_Performances_Co import StatCo
+from Controller.EtatDeConnexion import *
 
 # Elments du Dashboard
 def Dashboard(self):
+    connexion()
     #self.FDashboard
     # Frame de l'état de la connexion
     fDashco = tk.Frame(self.FDashboard, bg=self.page_selectionnee)
@@ -21,8 +23,9 @@ def Dashboard(self):
     LImageCO = ttk.Label(fDashco, image = self.new_image, background = self.page_selectionnee)
     LImageCO.grid(column=0, row=1, sticky=tk.W)
     
-    
-    LConnexion = ttk.Label(fDashco, text='Connecté -> WI-FI / Ethernet / Ip publique /  Nom domaine', background = self.page_selectionnee )
+    #Connecté -> WI-FI / Ethernet / Ip publique /  Nom domaine'
+    EtatCo=str(co+ " -> " )
+    LConnexion = ttk.Label(fDashco, text=EtatCo, background = self.page_selectionnee )
     LConnexion.grid(column=1, row=1, sticky=tk.W)
 
     # Frame statistique co
