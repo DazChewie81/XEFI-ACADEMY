@@ -2,6 +2,6 @@ Speedtest pour récupérer les valeurs de download et upload
 
 Le scan des ports sur les machines du même réseau
 
-Désactiver le bouton pour le scan
+Synchronisations des données toutes les 5 minutes par exemple pour voir les modifications en temps réel
 
 Mettre au propre le code

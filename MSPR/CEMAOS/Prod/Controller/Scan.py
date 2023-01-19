@@ -20,19 +20,7 @@ def scan_ports(host):
             for port in lport:
                 print ('port : %s\tstate : %s' % (port, nm[host][proto][port]['state']))
 
-
-
-'''def scan_network():
-    active_hosts = []
-    for host in range(1,256):
-        ip = "172.16.70." + str(host)
-        # Utilise la commande ping pour tester si l'hôte est actif
-        response = os.system("ping -c 1 " + ip)
-        if response == 0:
-            active_hosts.append(ip)
-            print(ip + " is active")
-    return active_hosts
-print(scan_network())'''
+#print(scan_ports("172.16.71.1"))
 
 
 def scan_network():
@@ -45,6 +33,4 @@ def scan_network():
         print(host + " : " + hostname)
         MachineScan[host]= hostname
     return MachineScan
-
-
 

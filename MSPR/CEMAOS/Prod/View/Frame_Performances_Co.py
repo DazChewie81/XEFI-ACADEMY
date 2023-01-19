@@ -5,10 +5,6 @@ from tkinter import ttk
 class StatCo:
     def __init__(self, app, frame, couleurbg, vDl, vUl, VPing):
         # Frame des tests de connections
-        
-        #fTestco = tk.Frame(frame, bg=couleurbg)
-        #fTestco.pack(fill ='both')
-        
         frame.columnconfigure(0, weight=1)
         frame.columnconfigure(1, weight=1)
         frame.columnconfigure(2, weight=1)

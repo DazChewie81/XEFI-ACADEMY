@@ -9,7 +9,7 @@ def TestsDebit(self):
     self.testsdebit=StatCo(self, self.FTestDebit, self.page_selectionnee, '---', '---', '---')
 
     # Bouton qui lance le test de débit
-    self.BTest = ttk.Button(self.FDebit, text="Lancer le test", command=lambda:{FctTestCOTestDebit(self)})
+    self.BTest = ttk.Button(self.FDebit, text="Lancer le test de débit", command=lambda:{FctTestCOTestDebit(self)})
     self.BTest.pack(anchor=tk.W, padx=[15,15], pady=[15,15])
 
 

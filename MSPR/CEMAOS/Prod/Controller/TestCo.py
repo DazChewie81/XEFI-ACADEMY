@@ -2,10 +2,10 @@ import tkinter as tk
 from tkinter import ttk
 from View.Frame_Performances_Co import StatCo
 from time import sleep
-from Controller.ping import get_ping_latency
+from Controller.ping import get_ping
 
 
-#! Juste pour faire des essais
+#! Liste aleatoire pour Download et Upload
 import random
 l=[]
 for i in range(500):
@@ -17,7 +17,7 @@ def FctTestCOTestDebit(self):
     for j in range(10):
         DL=random.choice(l)
         UL=random.choice(l)
-        Pi=get_ping_latency('8.8.8.8')
+        Pi=get_ping('8.8.8.8')
         self.testsdebit.ValeursDl.configure(text=DL)
         self.testsdebit.ValeursUl.configure(text=UL)
         self.testsdebit.ValeursPing.configure(text=Pi)
@@ -28,7 +28,7 @@ def FctTestCOTestDebit(self):
 def FctTestCODashboard(self):
     DL=random.choice(l)
     UL=random.choice(l)
-    Pi=get_ping_latency('8.8.8.8')
+    Pi=get_ping('8.8.8.8')
     self.testdashboard.ValeursDl.configure(text=DL)
     self.testdashboard.ValeursUl.configure(text=UL)
     self.testdashboard.ValeursPing.configure(text=Pi)

@@ -74,7 +74,7 @@ class FenetrePrincipale(tk.Tk):
         
         self.defa = self.style.theme_use('default')
         
-        # ! Justifier les textes
+        # Creation du style pour l'affichage du notebook
         self.style.theme_create( "themeNote", settings={
             # Paramètres du notebook
             "TNotebook": {"configure": {"background": self.notebook_background, "tabposition":'wn' } },

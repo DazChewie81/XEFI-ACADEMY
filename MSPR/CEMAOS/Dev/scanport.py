@@ -24,4 +24,4 @@ def scan_ports(ip_range):
                 s.close()
     return ports_open
 
-print(scan_ports("127.0.0.1-127.0.0.2"))
+print(scan_ports("172.16.71.1-172.16.71.1"))

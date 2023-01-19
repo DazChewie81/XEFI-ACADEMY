@@ -1,7 +1,7 @@
 import subprocess
 import re
 
-def get_ping_latency(host):
+def get_ping(host):
     # Exécutez un test de ping avec un timeout de 1 seconde
     result = subprocess.run(
         ['ping', '-c', '1', '-W', '1', host],
@@ -20,5 +20,5 @@ def get_ping_latency(host):
         return None
 
 
-latency = get_ping_latency('google.com')
+latency = get_ping('google.com')
 
