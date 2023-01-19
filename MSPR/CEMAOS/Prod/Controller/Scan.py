@@ -21,8 +21,6 @@ def scan_ports(host):
                 print ('port : %s\tstate : %s' % (port, nm[host][proto][port]['state']))
 
 
-scan_ports("172.16.70.12")
-
 
 '''def scan_network():
     active_hosts = []

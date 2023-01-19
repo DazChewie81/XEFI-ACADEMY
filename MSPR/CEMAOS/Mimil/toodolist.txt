@@ -1,8 +1,0 @@
-
-
-Mettre une barre pour pouvoir se déplacer lorsque la fenêtre est réduite
-
-
-
-Faire la dernière page
-

@@ -45,16 +45,3 @@ def IpPublique():
     except:
         pass
     return "Impossible de récupérer l'adresse IP publique"
-
-
-
-#! A vérifier
-'''# Récupère le nom de domaine
-def get_domain_name():
-    hostname = socket.gethostname()
-    try:
-        return socket.gethostbyname(hostname)
-    except socket.gaierror:
-        return "Impossible de récupérer le nom de domaine"
-
-print(get_domain_name())'''

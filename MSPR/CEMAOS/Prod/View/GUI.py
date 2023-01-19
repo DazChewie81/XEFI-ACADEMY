@@ -31,11 +31,16 @@ class FenetrePrincipale(tk.Tk):
         header(self, self.FScan)
         
         # Fonction affichage du Dashboard
-        # Importe l'image rond pour connection
+        
+        # Importe l'image rond vert pour etat connection
+        self.img_vert = Image.open("img/Rond_vert.png")
+        self.resized_image_vert = self.img_vert.resize((10,10))
+        self.new_image_vert = ImageTk.PhotoImage(self.resized_image_vert)
 
-        self.img = Image.open("img/Rond_vert.png")
-        self.resized_image = self.img.resize((10,10))
-        self.new_image = ImageTk.PhotoImage(self.resized_image)
+        # Importe l'image rond rouge pour etat connection
+        self.img_rouge = Image.open("img/Rond_rouge.png")
+        self.resized_image_rouge = self.img_rouge.resize((10,10))
+        self.new_image_rouge = ImageTk.PhotoImage(self.resized_image_rouge)
 
         # Importation le rond des tests de ping
         self.imgValeurs = Image.open("img/rond_tr.png")

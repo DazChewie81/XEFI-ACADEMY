@@ -21,12 +21,15 @@ def Dashboard(self):
     LEtat = ttk.Label(fDashco, text='Etat de la connexion', background = self.page_selectionnee )
     LEtat.grid(column=0, row=0, sticky=tk.W, columnspan = 2)
     
-    # Pour le rond vert, faire une condition si connecter -> C:/image_vert.png sinon c:/image_rouge.png
-    # Variable Connecté ou non, variable WIFI ou Ethernet ...
 
 
-    LImageCO = ttk.Label(fDashco, image = self.new_image, background = self.page_selectionnee)
-    LImageCO.grid(column=0, row=1, sticky=tk.W)
+    # Si on a la connexion on a un rond vert, sinon rouge self.new_image est généré dans GUI.py
+    if co == "Connecté":
+        LImageCO = ttk.Label(fDashco, image = self.new_image_vert, background = self.page_selectionnee)
+        LImageCO.grid(column=0, row=1, sticky=tk.W)
+    else:
+        LImageCO = ttk.Label(fDashco, image = self.new_image_rouge, background = self.page_selectionnee)
+        LImageCO.grid(column=0, row=1, sticky=tk.W)
     
     #Connecté -> WI-FI / Ethernet / Ip publique /  Nom domaine'
     EtatCo=str(co+ " -> " +is_connected()+" / Ip publique: "+IpPublique())
