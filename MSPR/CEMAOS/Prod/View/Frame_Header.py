@@ -11,7 +11,6 @@ def header(self, page):
     Fheader.columnconfigure(1, weight=1)
     
     Lname = ttk.Label(Fheader, text=hostname)
-    
     Lip = ttk.Label(Fheader, text=ip_address)
 
 

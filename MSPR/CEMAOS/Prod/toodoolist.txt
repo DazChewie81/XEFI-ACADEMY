@@ -1,0 +1,7 @@
+Speedtest pour récupérer les valeurs de download et upload
+
+Le scan des ports sur les machines du même réseau
+
+Désactiver le bouton pour le scan
+
+Mettre au propre le code
