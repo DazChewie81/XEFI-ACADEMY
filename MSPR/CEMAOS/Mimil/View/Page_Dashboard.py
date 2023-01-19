@@ -5,6 +5,7 @@ from View.Frame_Performances_Co import StatCo
 from Controller.EtatDeConnexion import *
 from Controller.ping import get_ping_latency
 from Controller.TestCo import FctTestCODashboard
+from Controller.Scan import scan_network
 
 # Elments du Dashboard
 def Dashboard(self):
@@ -50,10 +51,11 @@ def Dashboard(self):
     LList = ttk.Label(fDashList, text='Liste des machines sur le réseau', background = self.page_selectionnee)
     LList.grid(column=0, row=0, sticky=tk.W, columnspan = 2)
 
-    liste_machine={"Machineapp001" :"192.168.10.1", "Machineapp002" :"192.168.10.2", "Machineapp003" :"192.168.10.3", "Machineapp004" :"192.168.10.4", "Machineapp005" :"192.168.10.5", "Machineapp006" :"192.168.10.6", "Machineapp007" :"192.168.10.7", "Machineapp008" :"192.168.10.8", "Machineapp009" :"192.168.10.9", "Machineapp0010" :"192.168.10.10", "Machineapp0011" :"192.168.10.11", "Machineapp0012" :"192.168.10.12"}
+    #liste_machine={"Machineapp001" :"192.168.10.1", "Machineapp002" :"192.168.10.2", "Machineapp003" :"192.168.10.3", "Machineapp004" :"192.168.10.4", "Machineapp005" :"192.168.10.5", "Machineapp006" :"192.168.10.6", "Machineapp007" :"192.168.10.7", "Machineapp008" :"192.168.10.8", "Machineapp009" :"192.168.10.9", "Machineapp0010" :"192.168.10.10", "Machineapp0011" :"192.168.10.11", "Machineapp0012" :"192.168.10.12"}
+    
     col = 0
     ro = 1
-    for cle, valeur in liste_machine.items():
+    for cle, valeur in scan_network().items():
 
         # Si on a plus de 5 ou 10 machines dans une colonne, on change de colonne
         Str = f" - {cle} : {valeur}"

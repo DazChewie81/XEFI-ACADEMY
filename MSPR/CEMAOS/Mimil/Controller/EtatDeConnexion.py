@@ -49,7 +49,7 @@ def IpPublique():
 
 
 #! A vérifier
-# Récupère le nom de domaine
+'''# Récupère le nom de domaine
 def get_domain_name():
     hostname = socket.gethostname()
     try:
@@ -57,4 +57,4 @@ def get_domain_name():
     except socket.gaierror:
         return "Impossible de récupérer le nom de domaine"
 
-print(get_domain_name())
+print(get_domain_name())'''

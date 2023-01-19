@@ -4,6 +4,7 @@ from PIL import ImageTk, Image
 from View.Frame_Header import header
 from View.Page_Dashboard import Dashboard
 from View.Page_TestsDebit import TestsDebit
+from View.Page_Scan import Scan_page
 
 
 class FenetrePrincipale(tk.Tk):
@@ -43,6 +44,7 @@ class FenetrePrincipale(tk.Tk):
 
         Dashboard(self)
         TestsDebit(self)
+        Scan_page(self)
 
         # Caractéristiques de la fenêtre
     def window(self):
