@@ -3,33 +3,24 @@ from tkinter import ttk
 from View.Frame_Performances_Co import StatCo
 from time import sleep
 from Controller.ping import get_ping
-
-
-#! Liste aleatoire pour Download et Upload
-import random
-l=[]
-for i in range(500):
-    l.append(i)
+from Controller.Upload_Download_script import get_speed
 
 
 def FctTestCOTestDebit(self):
     self.BTest.configure(state=tk.DISABLED)
-    for j in range(10):
-        DL=random.choice(l)
-        UL=random.choice(l)
-        Pi=get_ping('8.8.8.8')
-        self.testsdebit.ValeursDl.configure(text=DL)
-        self.testsdebit.ValeursUl.configure(text=UL)
-        self.testsdebit.ValeursPing.configure(text=Pi)
-        self.update()
-        sleep(1)
+    download_speed, upload_speed = get_speed()
+    Pi=get_ping('8.8.8.8')
+    print(download_speed)
+    self.testsdebit.ValeursDl.configure(text=download_speed)
+    self.testsdebit.ValeursUl.configure(text=upload_speed)
+    self.testsdebit.ValeursPing.configure(text=Pi)
+    self.update()
     self.BTest.configure(state=tk.NORMAL)
 
 def FctTestCODashboard(self):
-    DL=random.choice(l)
-    UL=random.choice(l)
+    download_speed, upload_speed = get_speed()
     Pi=get_ping('8.8.8.8')
-    self.testdashboard.ValeursDl.configure(text=DL)
-    self.testdashboard.ValeursUl.configure(text=UL)
+    self.testdashboard.ValeursDl.configure(text=download_speed)
+    self.testdashboard.ValeursUl.configure(text=upload_speed)
     self.testdashboard.ValeursPing.configure(text=Pi)
     self.update()

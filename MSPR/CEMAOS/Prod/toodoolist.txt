@@ -1,3 +1,5 @@
+Améliorer la performances et la rapidité
+
 Speedtest pour récupérer les valeurs de download et upload
 
 Le scan des ports sur les machines du même réseau

@@ -53,8 +53,8 @@ class FenetrePrincipale(tk.Tk):
 
         # Caractéristiques de la fenêtre
     def window(self):
-        self.title("SemaOS")
-        self.iconphoto(False, tk.PhotoImage('img/logo.png'))
+        self.title("CemaOS")
+        self.iconphoto(False, tk.PhotoImage('img/logoOS.png'))
         self.geometry("2000x2000")
         #self.attributes("-alpha", 1)
         #self.wm_attributes("-transparentcolor", 'grey')
