@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-from PIL import ImageTk, Image
 from View.Frame_Performances_Co import StatCo
 from Controller.EtatDeConnexion import *
 from Controller.TestCo import FctTestCODashboard
